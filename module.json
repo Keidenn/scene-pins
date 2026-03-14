@@ -1,19 +1,24 @@
 {
   "id": "scene-pins",
   "title": "Scene Pins",
-  "description": "Add customizable pins to scenes that link to Actors, Items, or other Scenes",
+  "description": "Add customizable pins to scenes that link to Actors, Items, or other Scenes.",
   "version": "1.0.0",
   "compatibility": {
-    "minimum": "10",
+    "minimum": "13",
     "verified": "13"
   },
   "authors": [
     {
-      "name": "Author"
+      "name": "Keidenn",
+      "url": "https://github.com/Keidenn"
     }
   ],
-  "esmodules": ["scripts/scene-pins.js"],
-  "styles": ["styles/scene-pins.css"],
+  "esmodules": [
+    "scripts/scene-pins.js"
+  ],
+  "styles": [
+    "styles/scene-pins.css"
+  ],
   "languages": [
     {
       "lang": "en",
@@ -26,5 +31,9 @@
       "path": "lang/fr.json"
     }
   ],
-  "socket": true
+  "url": "https://github.com/Keidenn/scene-pins",
+  "manifest": "https://github.com/Keidenn/scene-pins/releases/latest/download/module.json",
+  "download": "https://github.com/Keidenn/scene-pins/releases/latest/download/scene-pins.zip",
+  "license": "LICENSE",
+  "readme": "README.md"
 }
