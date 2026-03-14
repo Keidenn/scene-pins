@@ -1,0 +1,30 @@
+{
+  "id": "scene-pins",
+  "title": "Scene Pins",
+  "description": "Add customizable pins to scenes that link to Actors, Items, or other Scenes",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Author"
+    }
+  ],
+  "esmodules": ["scripts/scene-pins.js"],
+  "styles": ["styles/scene-pins.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "socket": true
+}

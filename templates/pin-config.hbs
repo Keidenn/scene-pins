@@ -1,0 +1,72 @@
+<form class="scene-pins-config">
+  <div class="form-group">
+    <label>{{localize "SCENE_PINS.PinName"}}</label>
+    <input type="text" name="name" value="{{pin.name}}" />
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "SCENE_PINS.PinImage"}}</label>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img class="image-preview" src="{{pin.img}}" style="width:48px; height:48px; object-fit:contain; border:1px solid #444; border-radius:4px;" />
+      <input type="text" name="img" value="{{pin.img}}" style="flex: 1;" />
+      <button type="button" class="file-picker" data-target="img">
+        <i class="fas fa-file-import"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "SCENE_PINS.PinSize"}}</label>
+    <input type="number" name="size" value="{{pin.size}}" min="16" max="256" step="8" />
+  </div>
+
+  <hr style="margin: 15px 0; border-color: #444;" />
+
+  <h3 style="margin-bottom: 10px;">{{localize "SCENE_PINS.Links"}}</h3>
+
+  <div class="links-list" style="margin-bottom: 15px; max-height: 200px; overflow-y: auto;">
+    {{#each links}}
+    <div class="link-item" style="display: flex; align-items: center; gap: 8px; padding: 6px; border: 1px solid #2a2a2a; border-radius: 4px; margin-bottom: 6px;">
+      <img class="link-img" src="{{this.img}}" style="width:32px; height:32px; object-fit:cover; border-radius:4px;" />
+      <span class="link-type-badge" style="background:#444; padding:2px 6px; border-radius:3px; font-size:10px; text-transform:uppercase; color: #d4d4d4;">{{this.type}}</span>
+      <span class="link-name" style="flex:1;">{{this.name}}</span>
+      {{#if this.isDefault}}
+      <span class="default-badge" style="background:#ffd700; color:#000; padding:2px 6px; border-radius:3px; font-size:10px;">Par défaut</span>
+      {{else}}
+      <button type="button" class="set-default-btn" data-index="{{this.index}}" style="width: 32px; height: 32px; font-size:11px;" title="Définir par défaut">
+        <i class="fas fa-star" style="margin: 0; color: #ffd700;"></i>
+      </button>
+      {{/if}}
+      <button type="button" class="remove-link-btn" data-index="{{this.index}}" style="color:#ff6666; width: 32px; height: 32px;" title="Supprimer">
+        <i class="fas fa-times" style="margin: 0"></i>
+      </button>
+    </div>
+    {{else}}
+    <p style="color:#888; font-style:italic;">{{localize "SCENE_PINS.NoLinks"}}</p>
+    {{/each}}
+  </div>
+
+  <div class="add-link-section" style="background:#rgb(34 34 34 / 18%); padding:10px; border-radius:4px;">
+    <h4 style="margin-bottom:8px;">{{localize "SCENE_PINS.AddLink"}}</h4>
+    <div style="display:flex; gap:8px; align-items:center;">
+      <img class="add-link-preview" src="icons/svg/d20.svg" style="width:32px; height:32px; object-fit:cover; border-radius:4px; border:1px solid #444;" />
+      <select class="add-link-type" style="width:100px;">
+        {{#each linkTypes}}
+        <option value="{{this.value}}">{{this.label}}</option>
+        {{/each}}
+      </select>
+      <select class="add-link-target" style="flex:1;">
+        <option value="">{{localize "SCENE_PINS.SelectTarget"}}</option>
+      </select>
+      <button type="button" class="add-link-btn">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  </div>
+
+  <footer class="sheet-footer flexrow" style="margin-top:15px;">
+    <button type="submit" name="submit">
+      <i class="fas fa-save"></i> {{localize "Save"}}
+    </button>
+  </footer>
+</form>

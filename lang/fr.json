@@ -1,0 +1,22 @@
+{
+  "SCENE_PINS": {
+    "Title": "Scene Pins",
+    "CreatePin": "Créer un Pin",
+    "EditPin": "Modifier le Pin",
+    "DeletePin": "Supprimer le Pin",
+    "PinName": "Nom du Pin",
+    "PinImage": "Image du Pin",
+    "LinkType": "Type de lien",
+    "LinkTarget": "Cible du lien",
+    "Actor": "Personnage",
+    "Item": "Objet",
+    "Scene": "Scène",
+    "None": "Aucun",
+    "SelectTarget": "Sélectionner une cible",
+    "PinSize": "Taille du Pin",
+    "NoTarget": "Aucune cible liée",
+    "Links": "Liens",
+    "AddLink": "Ajouter un lien",
+    "NoLinks": "Aucun lien configuré"
+  }
+}
